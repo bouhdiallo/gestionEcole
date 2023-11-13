@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClasseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ClasseController::class,'index'])->name('classe');
+Route::patch('/updateClasse{id}',[ClasseController::class,'update'])->name('classe.update');
+Route::get('/showClasse{id}',[ClasseController::class,'show'])->name('classe.show');

@@ -12,7 +12,8 @@ class ClasseController extends Controller
      */
     public function index()
     {
-        //
+        $classes = Classe::all();
+        return view('classe.index',compact('classes'));
     }
 
     /**
@@ -34,9 +35,10 @@ class ClasseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Classe $classe)
+    public function show($id)
     {
-        //
+        $classe=Classe::find($id);
+        return view('classe.modifClasse',compact('classe'));
     }
 
     /**
@@ -50,9 +52,12 @@ class ClasseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Classe $classe)
+    public function update(Request $request, $id)
     {
-        //
+        $classe=Classe::find($id);
+        $classe->nom = $request->nom;
+        $classe->save();
+        return redirect()->route('classe');
     }
 
     /**

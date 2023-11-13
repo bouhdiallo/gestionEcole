@@ -33,12 +33,12 @@ Ajouter un élève
 
         <div class="form-group">
             <label for="exampleInputEmail1" class="form-label mt-4">Nom</label>
-            <input type="email" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Enter le nom">
+            <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Enter le nom">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1" class="form-label mt-4">Prenom</label>
-            <input type="email" class="form-control" name="prenom" aria-describedby="emailHelp" placeholder="Enter Le prenom">
+            <input type="text" class="form-control" name="prenom" aria-describedby="emailHelp" placeholder="Enter Le prenom">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">

@@ -25,9 +25,10 @@ Route::get('/eleves/add', [EleveController::class, 'create'])->name('addEleve');
 
 Route::post('/eleves/store', [EleveController::class, 'store']);
 Route::get('/eleves/show', [EleveController::class, 'store'])->name('show');
-Route::get('/eleves/edit', [EleveController::class, 'index'])->name('editEleve');
-Route::get('/eleves/update', [EleveController::class, 'update'])->name('update');
-Route::get('/eleves/destroy', [EleveController::class, 'destroy'])->name('destroy');
+Route::get('/eleves/edit/{id}', [EleveController::class, 'edit']);
+
+Route::post('/eleves/update', [EleveController::class, 'update']);
+Route::delete('/eleves/delete', [EleveController::class, 'destroy']);
 
 
 

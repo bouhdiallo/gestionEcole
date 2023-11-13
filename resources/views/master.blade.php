@@ -36,7 +36,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{route('listEleve')}}">Liste des élèves </a>
                             <a class="dropdown-item" href="{{route('addEleve')}}">Ajouter un élève</a>
-                            <a class="dropdown-item" href="{{route('editEleve')}}">Editer un élève</a>
+                            <a class="dropdown-item" href="/eleves/edit/{id}">Editer un élève</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Github link</a>
                         </div>
@@ -69,11 +69,17 @@
 
     <style>
         body {
-            background-color:darkslategray;
+            background-color:black;
             color:aliceblue;
         }
-        h1,p,label {
+        h1 {
             color:aliceblue;
+        }
+      label, span{
+        color:white;
+      }
+        h4{
+            color:white;
         }
     </style>
 

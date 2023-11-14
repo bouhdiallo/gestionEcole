@@ -46,6 +46,6 @@ Route::delete('/eleves/delete', [EleveController::class, 'destroy']);
 
 //bouh
 Route::get('/ajouter_note', [NoteController::class, 'ajout_note']);
-Route::post('/ajout/traitement', [NoteController::class, 'ajout_note_traitement']);
+Route::post('/ajout/traitement', [NoteController::class, 'ajout_note_traitement'])->name('add');
 Route::get('/notes', [NoteController::class,'index'])->name('index');
 

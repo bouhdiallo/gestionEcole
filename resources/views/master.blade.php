@@ -38,7 +38,7 @@
                             <a class="dropdown-item" href="{{route('addEleve')}}">Ajouter un élève</a>
                             <a class="dropdown-item" href="/eleves/edit/{id}">Editer un élève</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Github link</a>
+                            <a class="dropdown-item" href="https://github.com/bouhdiallo/gestionEcole">Github link</a>
                         </div>
                     </li>
 

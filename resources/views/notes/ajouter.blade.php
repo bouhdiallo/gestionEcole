@@ -1,22 +1,15 @@
 
-<!doctype html>
-    <html lang="en">
-      <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>Classe</title>
-      </head>
-      <body>
+@extends('master')
+
+@section('title', 'Ajouter un élève')
 
 
+@section('H1')
+Ajouter une note
+@stop
 
 
-<body>
-    <div class="container text-center">
+@section('content')
         <div class="row">
    <h1>Ajouter une note</h1>
 
@@ -37,15 +30,12 @@
 
     <form action="/ajout/traitement" method="POST">
       @csrf
-      @foreach ($eleves as $eleve)
-      <div class="form-group">
-        <label for="exampleSelect1" class="form-label mt-4">Example select</label>
-        <select class="form-select" id="exampleSelect1" name="eleveId">
+      <label for="exampleSelect1" class="form-label mt-4">Example select</label>
+      <select class="form-select" id="exampleSelect1" name="eleveId">
+          @foreach ($eleves as $eleve)
           <option value="{{$eleve->id}}">{{$eleve->nom}} {{$eleve->prenom}}</option>
+          @endforeach
         </select>
-      </div>
-      @endforeach
-
     <div class="form-group">
       <label for="text" class="form-label mt-4">matiere</label>
       <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter matiere" name="matiere">
@@ -59,7 +49,4 @@
    <button class="btn btn-primary"> ajouter une note</button>
 
 
-
-    </div>
-    </div>
-    </div>
+   @stop

@@ -1,7 +1,12 @@
-@include('/notes/header')
+@extends('master')
 
-<body>
-    <div class="container text-center">
+@section('title', 'List of eleves')
+
+@section('H1')
+    Liste des notes
+@stop
+
+@section('content')
         <div class="row">
 
 
@@ -19,6 +24,7 @@
                     <th>#</th>
                     <th>matiere</th>
                     <th>note</th>
+                    <th>Eleve</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -29,6 +35,7 @@
                     <td>{{$note->id}}</td>
                     <td>{{$note->matiere}}</td>
                     <td>{{$note->note}}</td>
+                    <td>{{$note->eleve->nom}} {{$note->eleve->prenom}}</td>
                     <td>
                         <form action="{{ route('delete.note',$note->id)}}" method="post">
                             @csrf @method('DELETE') 
@@ -39,6 +46,4 @@
                     </tr>
                 @endforeach                       
          </table>
-    </div>
-    </div>
-    </div>
+         @stop

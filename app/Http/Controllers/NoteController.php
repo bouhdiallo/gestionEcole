@@ -54,6 +54,7 @@ class NoteController extends Controller
     {
         $eleves = Eleve::all();
         $note=Note::find($id);
+        //dd($eleves);
         return view('notes.update',compact('note','eleves'));
     }
 

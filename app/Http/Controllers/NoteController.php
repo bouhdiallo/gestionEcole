@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Illuminate\Http\Request;
+use Symfony\Contracts\Service\Attribute\Required;
+
 
 class NoteController extends Controller
 {
@@ -11,30 +13,40 @@ class NoteController extends Controller
      * Display a listing of the resource.
      */
     public function index()
+
     {
-        //
+        return view('notes.liste_note');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+
+    public function ajout_note()
     {
-        //
+        return view('notes.ajouter');  
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+
+    public function ajout_note_traitement(Request $request)
     {
-        //
+
+         $request->validate([
+        'matiere' => 'required', 
+         'note' => 'required'
+
+         ]);
+
+         $notes = new Note ();
+        
+        $notes->matiere = $request->matiere;
+         $notes->note = $request->note;
+         $notes->save();
+         return back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Note $note)
+    public function show(Note $classe)
     {
         //
     }
@@ -42,7 +54,7 @@ class NoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Note $note)
+    public function edit(Note $classe)
     {
         //
     }
@@ -50,7 +62,7 @@ class NoteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Note $note)
+    public function update(Request $request, Note $classe)
     {
         //
     }
@@ -58,7 +70,7 @@ class NoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Note $note)
+    public function destroy(Note $classe)
     {
         //
     }

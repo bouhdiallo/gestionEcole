@@ -37,13 +37,12 @@ class EleveController extends Controller
             'prenom' => 'required|regex:/^[a-zA-Z0-9-ÿ\s]{2,50}$/',
             'sexe' => 'required|regex:/^[a-z]$/',
             'dateNaissance' => 'date:Y-m-d|before:today|after:1900-01-01',
-            'dateNaissance' => ['required', 'regex:/^([0-2][0-9]|3[0-1])-([0-9]|1[0-2])-[0-9]{4}$/'],
-
         ]);
 
         $categorie = new Eleve();
         $categorie->nom = $request->nom;
         $categorie->prenom = $request->prenom;
+        $categorie->classe = $request->classe;
         $categorie->sexe = $request->sexe;
         $categorie->dateNaissance = $request->dateNaissance;
         $categorie->save();

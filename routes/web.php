@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EleveController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoteController;
 use App\Models\Note;
@@ -27,6 +28,25 @@ Route::post('/ajout/traitement', [NoteController::class, 'ajout_note_traitement'
 Route::get('/showNote{id}', [NoteController::class, 'show'])->name('show.note');
 Route::patch('/updateNote{id}', [NoteController::class, 'update'])->name('update.note');
 Route::delete('/deleteNote{id}', [NoteController::class, 'destroy'])->name('delete.note');
+Route::get('/', function () {
+    return view('master');
+});
+
+
+Route::get('/eleves/list', [EleveController::class, 'index'])->name('listEleve');
+Route::get('/eleves/add', [EleveController::class, 'create'])->name('addEleve');
+
+
+Route::post('/eleves/store', [EleveController::class, 'store']);
+Route::get('/eleves/show', [EleveController::class, 'store'])->name('show');
+Route::get('/eleves/edit/{id}', [EleveController::class, 'edit']);
+
+Route::post('/eleves/update', [EleveController::class, 'update']);
+Route::delete('/eleves/delete', [EleveController::class, 'destroy']);
+
+
+
+
 
 
 

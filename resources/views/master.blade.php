@@ -24,8 +24,8 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion Notes</a>
                         <div class="dropdown-menu">
                             <!-- <a class="dropdown-item" href="#">Liste des notes </a> -->
-                            <a class="dropdown-item" href="">Ajouter une note</a>
-                            <a class="dropdown-item" href="#">Editer une note</a>
+                            <a class="dropdown-item" href="/ajouter_note">Ajouter une note</a>
+                            <a class="dropdown-item" href="/notes">Liste des notes</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Github link</a>
                         </div>

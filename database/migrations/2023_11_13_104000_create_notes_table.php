@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('eleve_id')->nullable();
+            $table->foreign('eleve_id')->references('id')->on('eleves')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->string('matiere');
             $table->float('note');
             $table->timestamps();

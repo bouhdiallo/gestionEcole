@@ -42,6 +42,11 @@ Ajouter un élève
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4">Classe</label>
+            <input type="text" class="form-control" name="classe" aria-describedby="emailHelp" placeholder="Enter Le prenom">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
             <label for="exampleInputEmail1" class="form-label mt-4">Date de naissance</label>
             <input type="date" class="form-control" name="dateNaissance" aria-describedby="emailHelp" placeholder="Enter Le prenom">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -55,6 +60,7 @@ Ajouter un élève
                     Masculin
                 </label>
             </div>
+            
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="sexe" id="optionsRadios2" value="f">
                 <label class="form-check-label" for="optionsRadios2">

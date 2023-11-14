@@ -27,8 +27,6 @@
    </div>
    @endif
        
-<<<<<<< HEAD
-=======
    <ul>
 
     @foreach ($errors->all() as $error)
@@ -37,10 +35,16 @@
     @endforeach
  </ul>
 
->>>>>>> feature/bouh
     <form action="/ajout/traitement" method="POST">
       @csrf
-
+      @foreach ($eleves as $eleve)
+      <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Example select</label>
+        <select class="form-select" id="exampleSelect1" name="eleveId">
+          <option value="{{$eleve->id}}">{{$eleve->nom}} {{$eleve->prenom}}</option>
+        </select>
+      </div>
+      @endforeach
 
     <div class="form-group">
       <label for="text" class="form-label mt-4">matiere</label>
@@ -49,11 +53,7 @@
 
     <div class="form-group">
       <label for="number" class="form-label mt-4">note</label>
-<<<<<<< HEAD
-      <input type="number" class="form-control" id="exampleInputEmail1"  placeholder="Enter note" name="note">
-=======
       <input type="number" class="form-control"   placeholder="Enter note" name="note">
->>>>>>> feature/bouh
     </div>  <br><br>
 
    <button class="btn btn-primary"> ajouter une note</button>

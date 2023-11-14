@@ -42,6 +42,7 @@ class EleveController extends Controller
         $categorie = new Eleve();
         $categorie->nom = $request->nom;
         $categorie->prenom = $request->prenom;
+        $categorie->classe = $request->classe;
         $categorie->sexe = $request->sexe;
         $categorie->dateNaissance = $request->dateNaissance;
         $categorie->save();

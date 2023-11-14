@@ -42,6 +42,11 @@ Editer un élève
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4">Classe</label>
+            <input type="text" class="form-control" name="classe" aria-describedby="emailHelp" placeholder="Enter Le prenom">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
             <label for="exampleInputEmail1" class="form-label mt-4">Date de naissance</label>
             <input type="date" class="form-control" name="dateNaissance" value="{{ $eleves->dateNaissance }}">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>

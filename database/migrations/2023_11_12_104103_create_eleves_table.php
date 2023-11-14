@@ -18,9 +18,7 @@ return new class extends Migration
             $table->string('classe');
             $table->date('dateNaissance');
             $table->string('sexe');
-            $table->unsignedBigInteger('note_id');
-            $table->unsignedBigInteger('note_id')->nullable();
-            $table->foreign('note_id')->references('id')->on('notes')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

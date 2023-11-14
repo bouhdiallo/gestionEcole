@@ -27,7 +27,14 @@
        
     <form action="{{route('update.note',$note->id)}}" method="POST">
       @csrf
-
+      @foreach ($eleves as $eleve)
+      <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Example select</label>
+        <select class="form-select" id="exampleSelect1" name="eleveId">
+          <option value="{{$eleve->id}}" selected>{{$eleve->nom}} {{$eleve->prenom}}</option>
+        </select>
+      </div>
+      @endforeach
 
     <div class="form-group">
       <label for="text" class="form-label mt-4">matiere</label>

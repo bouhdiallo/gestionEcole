@@ -17,12 +17,9 @@ return new class extends Migration
             $table->string('prenom');
             $table->date('dateNaissance');
             $table->string('sexe');
-            $table->unsignedBigInteger('classe_id');
-            $table->foreign('classe_id')->references('id')->on('classes')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('note_id');
+            $table->string('classe');
+            $table->unsignedBigInteger('note_id')->nullable();
             $table->foreign('note_id')->references('id')->on('notes')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('matiere_id');
-            $table->foreign('matiere_id')->references('id')->on('matieres')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

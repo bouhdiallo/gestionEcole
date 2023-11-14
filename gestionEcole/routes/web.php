@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EleveController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
 });
+
+
+Route::get('/eleves/list', [EleveController::class, 'index'])->name('listEleve');
+Route::get('/eleves/add', [EleveController::class, 'create'])->name('addEleve');
+
+
+Route::post('/eleves/store', [EleveController::class, 'store']);
+Route::get('/eleves/show', [EleveController::class, 'store'])->name('show');
+Route::get('/eleves/edit/{id}', [EleveController::class, 'edit']);
+
+Route::post('/eleves/update', [EleveController::class, 'update']);
+Route::delete('/eleves/delete', [EleveController::class, 'destroy']);
+
+
+
+
+
+
+

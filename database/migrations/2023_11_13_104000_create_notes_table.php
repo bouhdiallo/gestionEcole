@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('matiere');
             $table->float('note');
-            $table->string('matiere');
+     
             $table->timestamps();
         });
     }

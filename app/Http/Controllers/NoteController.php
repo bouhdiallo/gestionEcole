@@ -30,9 +30,8 @@ class NoteController extends Controller
     {
 
          $request->validate([
-        'matiere' => 'required', 
-         'note' => 'required'
-
+            'matiere' => 'required|alpha|max:20', 
+            'note' => 'required|numeric|between:0,10'
          ]);
 
          $notes = new Note ();

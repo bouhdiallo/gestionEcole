@@ -27,6 +27,14 @@
    </div>
    @endif
        
+   <ul>
+
+    @foreach ($errors->all() as $error)
+    <li class="alert alert-danger">{{$error}}</li>
+  
+    @endforeach
+ </ul>
+
     <form action="/ajout/traitement" method="POST">
       @csrf
 
@@ -38,7 +46,7 @@
 
     <div class="form-group">
       <label for="number" class="form-label mt-4">note</label>
-      <input type="number" class="form-control" id="exampleInputEmail1"  placeholder="Enter note" name="note">
+      <input type="number" class="form-control"   placeholder="Enter note" name="note">
     </div>  <br><br>
 
    <button class="btn btn-primary"> ajouter une note</button>

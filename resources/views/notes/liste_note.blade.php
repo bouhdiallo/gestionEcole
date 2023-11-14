@@ -7,11 +7,11 @@
 
     <a href="/ajouter_note" class="btn btn-primary">Ajouter une note</a >
         <hr>  
-           @if (session('status'))
+           {{-- @if (session('status'))
         <div class="alert alert-succes">
-          {{session('status')}}
+          {{session('status')}} --}}
         </div>
-        @endif
+        {{-- @endif --}}
 
          <table>
             <thead>
@@ -24,16 +24,15 @@
             </thead>
             <tbody>
                
-                 @foreach($notes as $note)
                 <tr>
-                    <td>{{$note->id}}</td>
-                    <td>{{$note->matiere}}</td>
-                    <td>{{$note->note}}</td>
+                    <td>1</td>
+                    <td>maths</td>
+                    <td>5</td>
                     <td>
                      <a href="" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
-               @endforeach
+               
          </table>
     </div>
     </div>
